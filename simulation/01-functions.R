@@ -16,7 +16,7 @@ m <- 0.8
 
 
 ### Identity Compartmentalization auf Felt Responsibility 
-FR_function <- function(comp) {
+FR_function <- function(comp, m) {
   feltresp <- m *(1 - 0.8*comp)^3
   return(feltresp)
 }
@@ -58,7 +58,7 @@ SD_function <- function(feltresp, courage, MOD) {
 }
 
 
-SD_function(an, an, an)
+SD_function(1, 0, 1)
 
 
 
