@@ -14,4 +14,5 @@ df$bad_sentence_percentage <- curse_function(df$anonymity, df$cues, df$MOD, df$b
 
 
 ggplot(df, aes(x= anonymity, y = bad_sentence_percentage, color = factor(cues))) +
-  stat_summary(fun.data = mean_cl_normal, position_dodge=0.1)
+  stat_summary(fun.data = mean_cl_normal, geom = "pointrange",
+               position = position_dodge(width = 0.1))
